@@ -1,0 +1,74 @@
+body {
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    background-color: rgb(26, 154, 233);
+}
+
+h2 {
+    color: burlywood;
+}
+
+h3 {
+    color:brown;
+    font-size: 1.2rem;
+}
+
+p.FontWeightNormal{
+    font-weight: normal;
+}
+
+p.FontWeightBold{
+    font-weight: bold;
+}
+
+p.FontStyleNormal{
+    font-style: normal;
+}
+
+p.FontStyleItalic{
+    font-style: italic;
+}
+
+p.LetterSpacingNormal{
+    letter-spacing: normal;
+}
+
+p.LetterSpacing3em{
+    letter-spacing: .3em;
+}
+
+p.LetterSpacing06em{
+    letter-spacing: -.06em;
+}
+
+p.TextDecorationNone{
+    text-decoration: none;
+}
+
+p.TextDecorationUnderline{
+    text-decoration: underline;
+}
+
+p.TextDecorationLineThrough{
+    text-decoration: line-through;
+}
+
+p.TextDecorationOverline{
+    text-decoration: overline;
+}
+
+p.TextTransformNone{
+    text-transform: none;
+}
+
+p.TextTransformUppercase{
+    text-transform: uppercase;
+}
+
+p.TextTransformLowercase{
+    text-transform: lowercase;
+}
+
+p.TextTransformCapitalize{
+    text-transform: capitalize;
+}
