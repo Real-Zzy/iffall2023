@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Introduction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            /* display: flex; */
+            min-height: 100vh;
+            background: url(./intro-img/background-intro.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px 0 20px;
+            background: rgb(159, 159, 159);
+        }
+
+        img {
+            max-width: 320px;
+        }
+
+        section {
+            color: #220505;
+            min-height: 320px;
+        }
+
+        section h1 {
+            font-size: 42px;
+        }
+
+        section p {
+            font-size: 22px;
+        }
+
+        .f-left {
+            float: left;
+            border: 3px solid;
+            border-radius: 30px;
+            margin-right: 20px;
+        }
+
+        .f-right {
+            float: right;
+            border: 3px solid;
+            border-radius: 60px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <section class="heading" id="heading">
+            <img src="./intro-img/head-pigeon.jpg" alt="head-pigeon" class="f-right">
+            <h1>What is pigeon photography?</h1>
+
+        </section>
+        <section class="paragraph1" id="paragraph1">
+            <img src="./intro-img/p1-pigeon.jpg" alt="p1-pigeon" class="f-left">
+            <p>
+                Pigeon photography is an aerial photography technique invented in 1907 by the German apothecary Julius
+                Neubronner, who also used pigeons to deliver medications. A homing pigeon was fitted with an aluminium
+                breast harness to which a lightweight time-delayed miniature camera could be attached. Neubronner's
+                German patent application was initially rejected, but was granted in December 1908 after he produced
+                authenticated photographs taken by his pigeons. He publicized the technique at the 1909 Dresden
+                International Photographic Exhibition, and sold some images as postcards at the Frankfurt International
+                Aviation Exhibition and at the 1910 and 1911 Paris Air Shows.
+            </p>
+        </section>
+        <section class="paragraph2" id="paragraph2">
+            <img src="./intro-img/p2-pigeon.jpg" alt="p2-pigeon" class="f-right">
+            <p>
+                Initially, the military potential of pigeon photography for aerial reconnaissance appeared interesting.
+                Battlefield tests in World War I provided encouraging results, but the ancillary technology of mobile
+                dovecotes for messenger pigeons had the greatest impact. Owing to the rapid development of aviation
+                during the war, military interest in pigeon photography faded and Neubronner abandoned his experiments.
+                The idea was briefly resurrected in the 1930s by a Swiss clockmaker, and reportedly also by the German
+                and French militaries. Although war pigeons were deployed extensively during World War II, it is unclear
+                to what extent, if any, birds were involved in aerial reconnaissance. The United States Central
+                Intelligence Agency (CIA) later developed a battery-powered camera designed for espionage pigeon
+                photography; details of its use remain classified.
+            </p>
+
+        </section>
+        <section class="paragraph3" id="paragraph3">
+            <img src="./intro-img/p3-pigeon.jpg" alt="p3-pigeon" class="f-left">
+            <p>
+                The construction of sufficiently small and light cameras with a timer mechanism, and the training and
+                handling of the birds to carry the necessary loads, presented major challenges, as did the limited
+                control over the pigeons' position, orientation and speed when the photographs were being taken. In
+                2004, the British Broadcasting Corporation (BBC) used miniature television cameras attached to falcons
+                and goshawks to obtain live footage, and today some researchers, enthusiasts and artists similarly
+                deploy crittercams with various species of animals.
+            </p>
+        </section>
+    </div>
+
+</body>
