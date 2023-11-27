@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Initial build</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px 0 20px;
+            background: rgb(159, 159, 159, 0.8);
+            padding-bottom: 50px;
+        }
+
+        .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .header img{
+            max-width: 120px;
+            float: right;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .dropdown{
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background-color: hsl(58, 74%, 43%);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown a{
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background-color: hsl(0, 0%, 95%);
+            min-width: 100px;
+            box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.8);
+        }
+
+        .dropdown:hover .content{
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: hsl(0, 0%, 70%);
+        }
+
+        .dropdown a:hover {
+            background-color: hsl(0, 0%, 90%);
+        }
+
+        @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content-row {
+            flex-direction: column;
+        }
+
+        .left-col, .right-col {
+            flex-basis: 100%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button>Time Period</button>
+        <div class="content">
+            <a href="./uses-wwi.html">WWI</a>
+            <a href="./uses-wwii.html">WWII</a>
+            <a href="./uses-postwwii.html">Post WWII</a>
+        </div>
+    </div>
+    <section class="header">
+        <img src="./technology-img/JN.jpg" alt="">
+        <h1>Uses for WWII</h1>
+    </section>
+    <div class="container">
+
+        
+        <section class="p2">
+            <p>
+                Despite the War Ministry's position immediately after the First World War, in 1932 it was reported that the German army was training pigeons for photography, and that the German pigeon cameras were capable of 200 exposures per flight. In the same year, the French claimed that they had developed film cameras for pigeons as well as a method for having the birds released behind enemy lines by trained dogs.<br><br>
+Although war pigeons and mobile dovecotes were used extensively during the Second World War, it is unclear to what extent, if any, they were employed for aerial photography. According to a report in 1942, the Soviet army discovered abandoned German trucks with pigeon cameras that could take photos in five-minute intervals, as well as dogs trained to carry pigeons in baskets. On the allied side, as late as 1943 it was reported that the American Signal Corps was aware of the possibility of adopting the technique.<br><br>
+It is certain, however, that during the Second World War pigeon photography was introduced into German nurseries in toy form. From around 1935 the toy figures produced under the brand Elastolin, some of which show motifs from before 1918 with updated uniforms, began to include a signal corps soldier with a pigeon transport dog. The figurine represents a soldier in the act of releasing a pigeon that carries an oversized pigeon camera.<br><br>
+Thanks to research conducted by the Musée suisse de l'appareil photographique at Vevey, much more is known about the pigeon cameras developed at about the same time by the Swiss clockmaker Christian Adrian Michel (1912–1980) in Walde. He was assigned to the Swiss Army's carrier pigeons service in 1931, and in 1933 he began work on adapting Neubronner's panoramic camera to 16 mm film, and improving it with a mechanism to control the delay before the first exposure and to transport the film between exposures. Michel's camera, patented in 1937, weighed only 70 grams (2.5 oz), and may have been one of the first to have a timer operated by clockwork.<br><br>
+Michel's plan to sell his camera to the Swiss Army failed, as he was unable to find a manufacturer to produce it in quantity; only about 100 of his cameras were constructed. After the outbreak of the Second World War Michel patented a shell and harness for the transport of items such as film rolls by carrier pigeon. Between 2002 and 2007 three of his cameras were auctioned by Christie's in London.<br><br>
+The Musée suisse de l'appareil photographique at Vevey holds around 1,000 photographs taken for test purposes during the development of Michel's camera. Most of the photos were taken with 16 mm orthopanchromatic Agfa film with a speed of ISO 8/10°. The exposed format was 10 mm × 34 mm. The quality was sufficient for a tenfold magnification. In the catalog of the 2007 exhibition Des pigeons photographes? they are classified as test photos on the ground or from a window, human perspectives from the ground or from elevated points, aeroplane-based aerial photographs, aerial photographs of relatively high altitude that were probably taken by pigeons released from a plane, and only a small number of typical pigeon photographs.<br>
+            </p>
+        </section>
+        
+    </div>
+
+</body>

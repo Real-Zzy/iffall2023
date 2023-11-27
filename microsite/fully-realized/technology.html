@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Initial build</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin: 60px auto;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px 0 20px;
+            background: rgb(159, 159, 159, 0.5);
+            padding-bottom: 50px;
+        }
+
+        .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .header img {
+            max-width: 120px;
+            float: right;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .slide {
+            /* background-color: grey; */
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide h1 {
+            text-align: center;
+            padding-top: 0;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .slide-row {
+            display: flex;
+            width: 2400px;
+            transition: 0.5s;
+        }
+
+        .slide-col {
+            width: 800px;
+            height: 400px;
+            position: relative;
+
+        }
+
+        .t-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+
+        .t-img img {
+            height: 450px;
+            width: 320px;
+            border-radius: 10px;
+        }
+
+        .t-text {
+            background: #2d3a59;
+            width: 520px;
+            height: 480px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10px;
+            color: #d3d4d6;
+            padding: 45px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        .t-text p {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .t-text h3 {
+            margin: 35px 0 5px;
+            color: #fff;
+        }
+
+        .t-container {
+            width: 800px;
+            height: 520px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .indicator {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+        }
+
+        .btn {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            margin: 4px;
+            border-radius: 15px;
+            background: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .active {
+            width: 45px;
+        }
+
+        .testimonial {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content-row {
+            flex-direction: column;
+        }
+
+        .left-col, .right-col {
+            flex-basis: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 960px){
+        .t-text {
+            left: 250px;
+            width: 300px;
+            height: 450px;
+            
+        }
+
+        .t-text p {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        /* .t-img img {
+            display: none;
+        } */
+        
+    }
+
+    @media only screen and (max-width: 768px){
+        .t-text {
+            left: 200px;
+            width: 300px;
+            height: 450px;
+            
+        }
+
+        .t-text p {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        /* .t-img img {
+            display: none;
+        } */
+    }
+
+    @media only screen and (max-width: 660px){
+        .t-text {
+            left: 200px;
+            width: 300px;
+            height: 450px;
+            
+        }
+
+        .t-text p {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        /* .t-img img {
+            display: none;
+        } */
+    }
+
+        /* @media only screen and (max-width: 960px) {
+            body {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin: 40px auto;
+    }
+
+    
+
+    .slide h1 {
+        font-size: 30px;
+    }
+
+    .t-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .t-text {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    .t-text h3 {
+        margin: 20px 0 5px;
+    }
+
+    .slide-col {
+        width: 100%;
+        height: auto;
+    }
+
+    .t-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .indicator {
+        display: none; /* Hide the indicator buttons 
+    }
+
+    .btn {
+        height: 10px;
+        width: 10px;
+        margin: 4px;
+        border-radius: 10px;
+    }
+
+    .active {
+        width: 30px;
+    }
+    } */
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h1>Technologies</h1>
+
+        <div class="t-container">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide">
+                    <div class="slide-col">
+                        <div class="t-text">
+                            <p>
+                                1903 Julius Neubronner, an apothecary in the German town of Kronberg near Frankfurt,
+                                resumed
+                                a practice
+                                begun by his father half a century earlier and received prescriptions from a sanatorium
+                                in
+                                nearby
+                                Falkenstein via pigeon post. He delivered urgent medications up to 75 grams (2.6 oz) by
+                                the
+                                same method,
+                                and positioned some of his pigeons with his wholesaler in Frankfurt to profit from
+                                faster
+                                deliveries
+                                himself. When one of his pigeons lost its orientation in fog and mysteriously arrived,
+                                well-fed, four
+                                weeks late, Neubronner was inspired with the playful idea of equipping his pigeons with
+                                automatic
+                                cameras to trace their paths. This thought led him to merge his two hobbies into a new
+                                "double sport"
+                                combining carrier pigeon fancying with amateur photography. (Neubronner later learned
+                                that
+                                his pigeon
+                                had been in the custody of a restaurant chef in Wiesbaden.)
+                            </p>
+                            <h3>Part I</h3>
+                            <!-- <p>some para</p> -->
+                        </div>
+                        <div class="t-img">
+                            <img src="./technology-img/1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="t-text">
+                            <p>
+                                According to Neubronner, there were a dozen different models of his camera. In 1907 he
+                                had
+                                sufficient
+                                success to apply for a patent. Initially his invention "Method of and Means for Taking
+                                Photographs of
+                                Landscapes from Above" was rejected by the German patent office as impossible, but after
+                                presentation of
+                                authenticated photographs the patent was granted in December 1908. (The rejection was
+                                based
+                                on a
+                                misconception about the carrying capacity of domestic pigeons.) The technology became
+                                widely
+                                known
+                                through Neubronner's participation in the 1909 International Photographic Exhibition in
+                                Dresden and the
+                                1909 International Aviation Exhibition in Frankfurt. Spectators in Dresden could watch
+                                the
+                                arrival of
+                                the pigeons, and the aerial photographs they brought back were turned into postcards.
+                                Neubronner's
+                                photographs won prizes in Dresden as well as at the 1910 and 1911 Paris Air Shows.
+                            </p>
+                            <h3>Part II</h3>
+                            <!-- <p>some para</p> -->
+                        </div>
+                        <div class="t-img">
+                            <img src="./technology-img/2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="t-text">
+                            <p>
+                                In a 1920 pamphlet, Neubronner described his last model as weighing slightly more than
+                                40
+                                grams (1.4 oz)
+                                and being capable of taking 12 exposures. In 2007, a researcher remarked that only
+                                little
+                                technical
+                                information is available about lenses, shutters and the speed of the photographic media,
+                                but
+                                reported
+                                that Neubronner obtained the film for his panoramic camera from ADOX. For this camera he
+                                estimated a
+                                film speed of ISO 25/15° – 40/17° and a shutter speed of 1/60 s – 1/100 s. The film was
+                                cut
+                                to the
+                                format 30 mm × 60 mm and bent into a concave shape to prevent unnecessary distortion due
+                                to
+                                the
+                                half-circle movement of the lens.
+                                In 1920 Neubronner found that ten years of hard work and considerable expenses had been
+                                rewarded only
+                                with his inclusion in encyclopedias and the satisfaction that an ancillary technology,
+                                the
+                                mobile
+                                dovecote (described below), had proved its worth in the war. Neubronner's panoramic
+                                camera
+                                is displayed
+                                at the German Museum of Technology in Berlin and the Deutsches Museum in Munich.
+                            </p>
+                            <h3>Part III</h3>
+                            <!-- <p>some para</p> -->
+                        </div>
+                        <div class="t-img">
+                            <img src="./technology-img/3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var slide = document.getElementById("slide");
+
+        btn[0].onclick = function () {
+            slide.style.transform = "translateX(0px)"
+            for(i = 0; i < 3; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function () {
+            slide.style.transform = "translateX(-800px)"
+            for(i = 0; i < 3; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function () {
+            slide.style.transform = "translateX(-1600px)"
+            for(i = 0; i < 3; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        
+    </script>
+</body>

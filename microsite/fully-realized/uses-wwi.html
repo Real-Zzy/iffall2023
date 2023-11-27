@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Initial build</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px 0 20px;
+            background: rgb(159, 159, 159, 0.8);
+            padding-bottom: 50px;
+        }
+
+        .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .header img{
+            max-width: 120px;
+            float: right;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .dropdown{
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background-color: hsl(58, 74%, 43%);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown a{
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background-color: hsl(0, 0%, 95%);
+            min-width: 100px;
+            box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.8);
+        }
+
+        .dropdown:hover .content{
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: hsl(0, 0%, 70%);
+        }
+
+        .dropdown a:hover {
+            background-color: hsl(0, 0%, 90%);
+        }
+
+        @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content-row {
+            flex-direction: column;
+        }
+
+        .left-col, .right-col {
+            flex-basis: 100%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button>Time Period</button>
+        <div class="content">
+            <a href="./uses-wwi.html">WWI</a>
+            <a href="./uses-wwii.html">WWII</a>
+            <a href="./uses-postwwii.html">Post WWII</a>
+        </div>
+    </div>
+    <section class="header">
+        <img src="./technology-img/JN.jpg" alt="">
+        <h1>Uses for WWI</h1>
+    </section>
+    <div class="container">
+
+        <section class="p1">
+            <p>
+                Neubronner's invention was at least partially motivated by the prospect of military applications. At the time photographic aerial reconnaissance was possible but cumbersome, as it involved balloons, kites or rockets. The Wright brothers' successful flight in 1903 presented new possibilities, and surveillance aircraft were introduced and perfected during the First World War. But pigeon-based photography, despite its practical difficulties, promised to deliver complementary, detailed photographs taken from a lower height.<br><br>
+The Prussian War Ministry was interested, but some initial skepticism could only be overcome through a series of successful demonstrations. The pigeons proved relatively indifferent to explosions, but during battle a dovecote may need to be moved, and pigeons can take some time to orient to their new position. The problem of making carrier pigeons accept a displaced dovecote with only a minimum of retraining had been tackled with some success by the Italian army around 1880; the French artillery captain Reynaud solved it by raising the pigeons in an itinerant dovecote.There is no indication that Neubronner was aware of this work, but he knew there must be a solution as he had heard of an itinerant fairground worker who was also a pigeon fancier with a dovecote in his trailer. At the 1909 exhibitions in Dresden and Frankfurt he presented a small carriage that combined a darkroom with a mobile dovecote in flashy colors. In months of laborious work he trained young pigeons to return to the dovecote even after it was displaced.<br><br>
+In 1912 Neubronner completed his task (set in 1909) of photographing the waterworks at Tegel using only his mobile dovecote. Almost 10 years of negotiations were scheduled to end in August 1914 with a practical test at a maneuver in Strasbourg, followed by the state's acquisition of the invention. These plans were thwarted by the outbreak of the war. Neubronner had to provide all his pigeons and equipment to the military, which tested them in the battlefield with satisfactory results, but did not employ the technique more widely.<br><br>
+Instead, under the novel conditions of attrition warfare, war pigeons in their traditional role as pigeon post saw a renaissance. Neubronner's mobile dovecote found its way to the Battle of Verdun, where it proved so advantageous that similar facilities were used on a larger scale in the Battle of the Somme. After the war, the War Ministry responded to Neubronner's inquiry to the effect that the use of pigeons in aerial photography had no military value and further experiments were not justified.<br><br>
+The International Spy Museum in Washington D.C. includes a replica of a pigeon camera in its collection.
+            </p>
+        </section>
+        
+    </div>
+
+</body>

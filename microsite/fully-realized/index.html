@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Initial build</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            height: 150vh;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .content-row {
+            width: 85%;
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+
+        .left-col,
+        .right-col {
+            flex-basis: 50%;
+        }
+
+        .left-col {
+            padding: 50px 0;
+        }
+
+        .search {
+            width: 260px;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            box-sizing: border-box;
+            border: 1px solid #432f22;
+            border-radius: 20px;
+        }
+
+        .search svg {
+            height: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .search input {
+            width: 100%;
+            outline: none;
+            border: 0;
+            color: #999;
+            background: transparent;
+            font-size: 14px;
+        }
+
+        hr {
+            width: 160px;
+            height: 4px;
+            background: #ee9e69;
+            margin: 30px 0;
+            border: none;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        
+        p {
+            color: #999;
+            margin: 30px 0;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .indicator {
+            display: flex;
+        }
+
+        span {
+            width: 5px;
+            height: 5px;
+            border: 1px solid #e69762;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .active {
+            background: #e69762;
+        }
+
+        .right-col img {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content-row {
+            flex-direction: column;
+        }
+
+        .left-col, .right-col {
+            flex-basis: 100%;
+        }
+
+        /* Add more styles or adjustments as needed for mobile view */
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./index-img/logo.jpg" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content-row">
+            <div class="left-col">
+                <div class="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #e3e9f2
+                            }
+                        </style>
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg> <input type="text">
+                </div>
+                <hr>
+                <h1>Pigeon Photography</h1>
+                <p>An aerial photography technique invented in 1907. Explore this website for more.</p>
+                <div class="indicator">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="right-col">
+                <img src="./index-img/index-pigeon.jpg" alt="pigeon">
+            </div>
+        </div>
+
+    </div>
+</body>
