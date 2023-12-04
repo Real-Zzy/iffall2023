@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Build</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    /* img {
+        max-height: 100px;
+        max-width: 400px;
+    } */
+    
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header{
+        text-align: center;
+    }
+    
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .images img {
+        max-height: 100px;
+        max-width: 200px;
+        width: 200px;
+        height: 100px;
+    }
+    
+    .images img:hover {
+        /* box-shadow: 0 0 0 0.5em #eb9ba9,
+                    0 0 0 1em #dfda4f; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    
+    .img-container {
+        width: 25%;
+        height: fit-content;
+        padding-top: 20px;
+    }
+    
+    #enlarged-container {
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        display: none;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #container {
+        width: 800px;
+        height: 500px;
+        padding-top: 300px;
+        padding-left: 100px;
+        margin: auto;
+    }
+    
+    #close {
+        color: red;
+        font-size: 50px;
+        float: right;
+    }
+    
+    #prev {
+        color: white;
+        font-size: 60px;
+        position: absolute;
+        top: 400px;
+        left: 50px;
+    }
+    
+    #next {
+        color: white;
+        font-size: 60px;
+        position: absolute;
+        top: 400px;
+        right: 50px;
+    }
+    
+    #container img {
+        width: 600px;
+        max-height: 200px;
+    }
+
+    .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        @media only screen and (max-width: 960px) {
+        .images {
+            flex-direction: column;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: auto;
+        }
+
+        .img-container {
+            width: 80%;
+            margin-bottom: 20px;
+            margin: auto;
+        }
+
+        #close {
+            font-size: 30px; 
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #prev,
+        #next {
+            font-size: 30px;
+            top: 70%;
+            transform: translateY(-50%);
+        }
+
+        #container {
+            width: 90%;
+            height: auto;
+            padding-left: 30px;
+            margin: auto;
+        }
+
+        .container img{
+            max-width: 600px;
+            height: 200px;
+        } 
+
+        
+
+    /* #enlarged-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+    /* #container {
+        width: auto;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: auto;
+        text-align: center;
+    }
+
+    #close {
+        top: 10px;
+        right: 10px;
+    }
+
+    #prev,
+    #next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .container img {
+        max-width: 100%;
+        max-height: 70vh;
+        margin: auto;
+    } */
+}
+
+@media only screen and (max-width: 728px) {
+    .container img{
+            max-width: 400px;
+            height: 135px;
+        } 
+}
+
+@media only screen and (max-width: 425px) {
+    .container img{
+            max-width: 280px;
+            height: 96px;
+        } 
+}
+    
+
+    @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .content-row {
+            flex-direction: column;
+        }
+
+        .left-col, .right-col {
+            flex-basis: 100%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Image Gallery</h1>
+        <small>click image to view</small>
+    </div>
+    <div class="images" id="images">
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/1.jpg" alt="image1" class="img-click" id="img-click-0" data-index="0">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/2.jpg" alt="image2" class="img-click" id="img-click-1" data-index="1">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/3.jpg" alt="image3" class="img-click" id="img-click-2" data-index="2">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/4.jpg" alt="image4" class="img-click" id="img-click-3" data-index="3">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/5.jpg" alt="image5" class="img-click" id="img-click-4" data-index="4">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/6.jpg" alt="image6" class="img-click" id="img-click-5" data-index="5">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/7.jpg" alt="image7" class="img-click" id="img-click-6" data-index="6">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/8.jpg" alt="image8" class="img-click" id="img-click-7" data-index="7">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/9.jpg" alt="image9" class="img-click" id="img-click-8" data-index="8">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/10.jpg" alt="image10" class="img-click" id="img-click-9" data-index="9">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/11.jpg" alt="image11" class="img-click" id="img-click-10" data-index="10">
+        </div>
+        <div class="img-container" id="img-container">
+            <img src="./image-gallery/12.jpg" alt="image12" class="img-click" id="img-click-11" data-index="11">
+        </div>
+    </div>
+    <div class="enlarged-container" id="enlarged-container">
+        <div class="container" id="container">
+            <span class="close" id="close">&#x00D7;</span>
+            <span class="prev" id="prev"> &#x276E;</span>
+            <img src="" alt="enlarged-img" class="enlarged-img" id="enlarged-img">
+            <span class="next" id="next">&#x276F;</span>
+        </div>
+    </div>
+    <script>
+
+        const num_img = 12;
+        let enlargedImg = null;
+        let imgIndex = 0;
+        let img_arr = null;
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const clickableImg = this.querySelectorAll(".img-click");
+            clickableImg.forEach(function (image) {
+                image.addEventListener("click", function () {
+                    enlarge(this);
+                })
+            })
+        });
+
+        function enlarge(imgs) {
+            enlargedImg = document.getElementById("enlarged-img");
+            imgIndex = parseInt(imgs.getAttribute("data-index"));
+            enlargedImg.src = imgs.src;
+            document.getElementById("enlarged-container").style.display = "block";
+            document.getElementById("close").addEventListener("click", close);
+            img_arr = document.getElementsByClassName("img-click");
+            document.getElementById("prev").addEventListener("click", previous);
+            document.getElementById("next").addEventListener("click", next);
+
+        }
+
+        function close() {
+            document.getElementById("enlarged-container").style.display = "none";
+        }
+
+        function previous() {
+            imgIndex -= 1;
+            imgIndex = (imgIndex + 12) % num_img;
+            enlargedImg.src = img_arr[imgIndex].src;
+        }
+
+        function next() {
+            imgIndex += 1;
+            imgIndex = imgIndex % num_img;
+            enlargedImg.src = img_arr[imgIndex].src;
+        }
+    </script>
+</body>
+
+</html>

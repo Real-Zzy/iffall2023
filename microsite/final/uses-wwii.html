@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Initial build</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(./technology-img/bg.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 0px 20px 0 0px;
+            background: rgb(159, 159, 159, 0.8);
+            padding-bottom: 50px;
+            display: flex;
+        }
+
+        .navbar-container {
+            height: fit-content;
+            width: 100%;
+            position: relative;
+            background: #191513;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .logo img {
+            width: 50px;
+            cursor: pointer;
+            margin: 35px 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+            padding: 5px 2px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom: 3px solid #eea16d;
+        }
+
+        .header img {
+            max-width: 120px;
+            float: right;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background-color: hsl(58, 74%, 43%);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .dropdown a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background-color: hsl(0, 0%, 95%);
+            min-width: 100px;
+            box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.8);
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            background-color: hsl(0, 0%, 70%);
+        }
+
+        .dropdown a:hover {
+            background-color: hsl(0, 0%, 90%);
+        }
+
+        .container-img {
+            flex: 0 0 30%;
+            text-align: right;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+            nav {
+                margin-top: 20px;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .content-row {
+                flex-direction: column;
+            }
+
+            .left-col,
+            .right-col {
+                flex-basis: 100%;
+            }
+
+            .container-img {
+                flex: 0 0 40%;
+                text-align: right;
+                display: none;
+            }
+
+            .container-img img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            section p {
+                font-size: 10px;
+                line-height: 1.5;
+            }
+
+            .header img {
+                display: none;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./index-img/logo.jpg" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./technology.html">Technology</a></li>
+                    <li><a href="./uses-wwi.html">Uses</a></li>
+                    <li><a href="./image-gallery.html">Images</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="header">
+        <img src="./technology-img/JN.jpg" alt="">
+        <h1>Uses for WWII</h1>
+    </section>
+    <div class="container">
+        <div class="dropdown">
+            <button>Time Period</button>
+            <div class="content">
+                <a href="./uses-wwi.html">WWI</a>
+                <a href="./uses-wwii.html">WWII</a>
+                <a href="./uses-postwwii.html">Post WWII</a>
+            </div>
+        </div>
+
+        <section class="p2">
+            <p>
+
+                In 1932, the German army trained pigeons for aerial photography, with capabilities of 200 exposures per
+                flight. Simultaneously, the French developed film cameras for pigeons, releasing them behind enemy lines
+                using trained dogs. Despite the extensive use of war pigeons and dovecotes during World War II, their
+                specific role in aerial photography remains unclear. In 1942, the Soviet army discovered German trucks
+                with pigeon cameras, while the American Signal Corps considered adopting the technique in 1943. German
+                nurseries introduced pigeon photography toys during the war, featuring soldiers releasing pigeons with
+                oversized cameras.<br>
+
+                Swiss clockmaker Christian Adrian Michel played a crucial role in pigeon camera development in the
+                1930s. Assigned to the Swiss Army's carrier pigeons service, he adapted Neubronner's panoramic camera to
+                16 mm film, resulting in a patented lightweight camera in 1937. Despite unsuccessful attempts to sell to
+                the Swiss Army, around 100 cameras were constructed. Michel later patented a shell and harness for
+                pigeon transport during World War II. The Musée suisse de l'appareil photographique holds approximately
+                1,000 test photos from the development of Michel's camera, showcasing the innovative use of pigeons in
+                wartime photography.<br>
+            </p>
+        </section>
+
+        <section class="container-img">
+            <img src="./uses-img/wwii.jpg">
+        </section>
+
+    </div>
+
+</body>
